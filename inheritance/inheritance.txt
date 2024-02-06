@@ -1,0 +1,280 @@
+# tactiq.io free youtube transcript
+# Inheritance for beginners - OOP in PHP | Part 6
+# https://www.youtube.com/watch/UWtB1srbixc
+
+00:00:00.060 inheritance is one of the most important
+00:00:02.100 constant in object-oriented programming
+00:00:04.170 meaning that if you know inheritance in
+00:00:06.899 one of your programming language you can
+00:00:09.420 easily adapt another because the
+00:00:11.400 principle is the identical inheritance
+00:00:14.730 is a way when one class extends
+00:00:17.670 properties and methods from another and
+00:00:20.250 the class which extends these properties
+00:00:22.650 and methods is called a child class and
+00:00:24.539 the class from which it extends is
+00:00:26.910 called parent class let's jump into the
+00:00:30.240 code here I have created parent class
+00:00:32.579 which has public property one protected
+00:00:35.489 property two and private property three
+00:00:37.739 and I created child class which extends
+00:00:41.160 parent class and I created child class
+00:00:43.950 instance and I'm printing property one
+00:00:46.910 okay let's see what will be the output
+00:00:49.950 output is of course one because we just
+00:00:54.149 right now used property one on child
+00:00:58.469 class from parent this means that when
+00:01:02.070 we extend child class on the line eleven
+00:01:04.500 child class extended and took the
+00:01:08.610 properties from the parent class okay
+00:01:11.640 right now I'm gonna create public
+00:01:14.100 property one in child class and assign
+00:01:17.909 11 to it
+00:01:19.020 and right now my output is 11 right now
+00:01:23.490 we have over ID'd the property one
+00:01:27.530 property on the parent class we know
+00:01:30.570 that private property is available only
+00:01:33.000 inside class even though that we extend
+00:01:36.270 a child class from parent class we don't
+00:01:38.880 have access on private property but we
+00:01:41.610 do have access on protected property
+00:01:44.490 which is property two so we can actually
+00:01:46.950 access our property to inside child
+00:01:49.740 class but we cannot access this
+00:01:52.049 protected property from outside any of
+00:01:54.600 these classes okay for accessing the
+00:01:57.360 private property I'm going to create a
+00:01:58.860 getter method which will return property
+00:02:01.350 to public function get property to
+00:02:07.580 English returns property to
+00:02:13.280 let's output this property - it is of
+00:02:20.520 course - now I can override my protected
+00:02:25.860 property also 22 and run the code in
+00:02:32.610 right now even though that the get
+00:02:35.430 property - method is written on the
+00:02:37.350 parent class
+00:02:38.310 the result is 22 because whenever this
+00:02:42.150 property - was called inside the parent
+00:02:45.360 class this was the child class and this
+00:02:49.620 property - was 22 okay let's let's see
+00:02:54.030 actually what is this inside the parent
+00:02:58.069 and it is child class as you see when
+00:03:01.799 I'm overriding public or protected
+00:03:03.870 property there are one restriction if
+00:03:07.170 I'm overriding public property
+00:03:09.209 I cannot decrease the visibility level
+00:03:12.510 so if my property is public and declared
+00:03:15.390 in the parent class and I'm overriding
+00:03:17.760 it I cannot make it protected or even
+00:03:21.329 private and if my property is protected
+00:03:24.060 I cannot make it private so if I try to
+00:03:28.230 make it private this will throw an error
+00:03:30.510 in my console the exact same rules work
+00:03:34.290 for static properties and static methods
+00:03:36.870 so if you have declared public or
+00:03:40.200 protected static property in the parent
+00:03:42.180 class you can override it in the child
+00:03:44.370 class but you cannot decrease the
+00:03:46.500 visibility level I can move even further
+00:03:49.230 and override methods from parent class
+00:03:53.989 public function get property - in either
+00:03:59.280 I can call parent classes get property -
+00:04:03.209 method which is what is written right
+00:04:05.670 now or I can do some additional action
+00:04:09.389 so for example I can take my parent
+00:04:13.200 classes get property two methods result
+00:04:16.470 and save it in a result variable for
+00:04:19.500 example and after this I'm gonna return
+00:04:23.190 something
+00:04:26.360 plus the result so I can add additional
+00:04:31.050 logic to appearance method and when I
+00:04:35.460 run the code it prints something 22 the
+00:04:40.200 same restriction happens to the methods
+00:04:42.030 also i cannot decrease the visibility
+00:04:45.210 level of the method this will throw an
+00:04:47.820 error if you use PHP type hinting in
+00:04:51.540 your override method in the child class
+00:04:53.910 you need to add type hinting also on the
+00:04:57.360 child and overridden method so if I say
+00:05:01.200 that my get property to return string
+00:05:04.140 this rule throw an error until I ate
+00:05:07.530 here also that gets property to in the
+00:05:10.590 child class returns string we can see
+00:05:13.590 that without this it throws in error
+00:05:17.040 Declaration of channel class get
+00:05:18.600 property two must be compatible with
+00:05:20.400 parent cascade property two so as soon
+00:05:23.610 as I hear this string there this is fine
+00:05:26.730 and this works also on method arguments
+00:05:30.360 so if I create a print text method which
+00:05:33.600 accepts text and I say that the type of
+00:05:36.540 the text is a string and I just echo the
+00:05:40.740 text if I try to override this print
+00:05:45.390 text method in the child class I need to
+00:05:49.560 accept also stream so saying that int
+00:05:53.240 text here it doesn't actually work and
+00:05:57.630 Ecko text ran the code declaration of
+00:06:04.380 child class print text in text should be
+00:06:06.990 compatible with parent class print text
+00:06:09.630 with a string text that's the case so if
+00:06:12.900 I change this into string then this
+00:06:15.210 works fine so the method declared in the
+00:06:18.240 child class must be declared in exactly
+00:06:21.300 the same way as it is declared in the
+00:06:23.490 parent class the number of arguments the
+00:06:26.280 type of arguments and the return type of
+00:06:29.520 the method should be the same in the
+00:06:31.410 child class also but if you don't use
+00:06:33.750 PHP sevens type hinting and you have
+00:06:36.510 just text here and
+00:06:38.610 takes their you can accept in one case
+00:06:42.240 you can accept string in second case you
+00:06:44.759 can accept number because in this case
+00:06:47.610 we don't specify which type is declared
+00:06:50.189 in the parent class method constants can
+00:06:53.550 also be overridden in PHP if I have a
+00:06:56.400 constant declared my constant in parent
+00:06:58.860 class I can read eclair the same
+00:07:00.780 constant in the child class and when I
+00:07:02.879 output my constant on the child class
+00:07:05.189 the result is child constant from PHP
+00:07:09.419 7.1 we have also a possibility to where
+00:07:12.569 the visibility keyword on constants by
+00:07:15.120 the way if you don't have that much
+00:07:16.409 experience working with constants you
+00:07:18.360 can check my proof video where I show
+00:07:20.099 you a real world example of why you may
+00:07:22.800 need constants but in this case if I add
+00:07:25.440 private visibility keyword to be to the
+00:07:29.039 parent class constant this still works
+00:07:31.229 fine because these constant is available
+00:07:33.479 inside the parent class in another
+00:07:35.250 constant my constant which is declared
+00:07:37.620 in the child class is available in the
+00:07:39.750 child class but if I add private
+00:07:43.729 visibility keyword inside the child
+00:07:46.319 class also this throws an error can't
+00:07:48.960 access private constant if I add
+00:07:51.830 protected here the same will happen I
+00:07:54.690 cannot access my constant from outside
+00:07:58.199 the class because is protected but I can
+00:08:01.469 have a protected here and this will
+00:08:04.710 override the parents protected constant
+00:08:08.069 and I can use this constant in the
+00:08:11.009 method get constant return self my
+00:08:18.779 constant and as far as this constant is
+00:08:21.650 protected I can access to my constant
+00:08:24.629 and let's let's create a static method
+00:08:28.229 for this get constant run code and I see
+00:08:35.789 my constant but if I have again these as
+00:08:38.370 a private constant I cannot access it
+00:08:40.740 this red line here indicates that I need
+00:08:43.828 to have PHP 7.1 to use private on
+00:08:47.339 constants actually I do have a PHP
+00:08:51.040 yeah I do have PHP 7.3 but my ID PHP
+00:08:55.839 language is set to lower version if I go
+00:08:59.680 to the languages and PHP I can see that
+00:09:04.149 I have said to PHP 5.6 so I'm gonna say
+00:09:08.670 27.3 okay and now I don't see this red
+00:09:13.839 line anymore and this indicates because
+00:09:16.839 I'm trying to access on the private
+00:09:18.940 constant and this basically is not valid
+00:09:22.480 I really love this ID because it gives
+00:09:25.839 me her before even I run the code so
+00:09:28.329 when I run the code I see that I have an
+00:09:31.720 error and this also indicates that you
+00:09:34.209 will have an error when you run the code
+00:09:35.620 but as soon as you change this into
+00:09:37.180 protecting this also disappears I love
+00:09:40.990 Peter Strahm let's talk on a more
+00:09:43.839 real-world example here I have created
+00:09:47.050 person class which has named agent phone
+00:09:49.360 properties and generated constructor for
+00:09:51.399 this I created employee class which
+00:09:53.800 extends from person and any additional
+00:09:56.050 salary property on the employee class
+00:09:58.120 now I'm going to generate the
+00:10:00.010 constructor for the employee class which
+00:10:01.930 will actually call the parents
+00:10:03.279 constructor so here I accept
+00:10:07.690 name age phone and additionally I want
+00:10:10.420 to accept celery also I'm gonna call
+00:10:13.959 parent classes constructor passing name
+00:10:17.860 age and phone there and additionally I
+00:10:22.899 want to save salary as a private
+00:10:26.500 property inside the employee class okay
+00:10:30.910 so name age and phone are given to the
+00:10:34.360 parent class and parent class knows what
+00:10:36.550 to do with these properties and I know
+00:10:39.190 that I want to save salary inside
+00:10:41.440 employee class fine now let's create
+00:10:45.360 employee user and here is my first
+00:10:49.329 employee person which has all of these
+00:10:51.880 four properties okay now I'm going to
+00:10:54.850 create additional function additional
+00:10:56.980 method in the person class which says
+00:10:59.949 hello and I'm going to return
+00:11:04.210 hello from person but I can override and
+00:11:11.030 I'm gonna override these method in my
+00:11:12.890 child class and I'm gonna return I am an
+00:11:18.440 employee this name and now when I print
+00:11:29.650 employee hello
+00:11:39.040 this will say that I'm employee John so
+00:11:42.980 we have just over ID'd the hello method
+00:11:45.200 from the person class if I comment out
+00:11:47.180 these hello method inside the employee
+00:11:48.860 class it will say that it's hello from
+00:11:51.230 person because parent method will be
+00:11:53.360 used if I want to restrict the other
+00:11:58.070 classes to extend from person I can add
+00:12:00.440 final key word to my person class which
+00:12:03.320 means that this class cannot be extended
+00:12:06.460 final class person in this line line 22
+00:12:10.160 now will throw an error saying that
+00:12:12.650 class employee must not inherit from
+00:12:16.040 final class or I can leave the class
+00:12:20.300 without final but I can add the final to
+00:12:24.950 my hello method meaning that hello
+00:12:27.380 method cannot be overridden
+00:12:29.600 of course hello method is something
+00:12:32.960 which should be different in the
+00:12:34.370 employee class but if I have a gate age
+00:12:37.550 method which is really obvious method
+00:12:39.590 let me generated using getter get age so
+00:12:42.710 if I have this gate age method I think I
+00:12:45.710 don't want it to be overridden in my any
+00:12:47.960 of the child class so I'm gonna add the
+00:12:50.150 final keyword to the get 8 method and it
+00:12:52.850 cannot be overridden in any of these
+00:12:54.620 child classes okay let's make this
+00:12:57.170 example even better and create another
+00:12:59.750 class student class student extends from
+00:13:03.230 person and now let's think one property
+00:13:06.500 at least one property which is available
+00:13:08.810 for student only why the student number
+00:13:11.900 for example again generate constructor
+00:13:14.330 passing their name agent phone which is
+00:13:16.610 also come
+00:13:17.600 for student and let's say the student
+00:13:20.990 number is a public property but we're
+00:13:25.400 going to first accept this student
+00:13:27.050 number in the constructor okay so taking
+00:13:31.610 these in assigning is a public property
+00:13:34.850 student number and let's create a
+00:13:37.880 student instance and instead of two
+00:13:42.710 thousand let's give some student number
+00:13:47.560 like this and this is of course student
+00:13:53.770 and we can either dump the student or
+00:13:59.050 let's override hello method again and
+00:14:03.190 instead of calling parent hello I'm
+00:14:06.110 going to return hello i am student this
+00:14:14.410 name with number this student number
+00:14:23.530 perfect and let's run the code and we
+00:14:28.010 see hello i'm student john with number
+00:14:31.040 fourteen fifty two three six eighty nine
+00:14:35.360 you will be really welcome if you like
+00:14:38.180 share or comment the video and if you
+00:14:40.880 want to see more content from me he did
+00:14:43.130 subscribe and the Bell Watson to be
+00:14:45.110 notified about the new videos thanks for
+00:14:47.240 watching and see you next time

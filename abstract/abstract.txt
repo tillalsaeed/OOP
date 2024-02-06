@@ -1,0 +1,127 @@
+# tactiq.io free youtube transcript
+# Abstract classes, abstraction in PHP - OOP in PHP | Part 7
+# https://www.youtube.com/watch/EyY3BVPJXtI
+
+00:00:00.079 obstruction is yet another very
+00:00:03.149 important concept in object-oriented
+00:00:04.830 programming it's related to inheritance
+00:00:07.170 but there is one big difference abstract
+00:00:09.719 class can have methods without buddy
+00:00:12.840 which means that parent class which is
+00:00:15.570 not struct class knows what should be
+00:00:18.359 done but doesn't know how it should be
+00:00:20.789 done so it will let each children to do
+00:00:23.939 the thing when you're about to create a
+00:00:25.710 child class which extends from the
+00:00:27.720 period abstract class you need to
+00:00:29.609 consider the following rules you need to
+00:00:31.830 read the clear override all abstract
+00:00:34.350 methods declared in the parent class the
+00:00:37.079 arguments given to the methods should be
+00:00:38.850 the same as for the parent abstract
+00:00:41.730 method methods in the child class can
+00:00:45.030 have additional arguments with default
+00:00:47.760 values which are not present in the
+00:00:49.980 parent Alfred method if abstract class
+00:00:53.129 uses type hinting for arguments or for
+00:00:56.010 return values you need to consider also
+00:00:58.590 in the child class the visibility of the
+00:01:01.500 child's method should be the same or
+00:01:04.610 less restricted than the parents one and
+00:01:08.070 one really important objects cannot be
+00:01:11.280 created from the abstract class let's
+00:01:13.409 create our first after class and extend
+00:01:16.200 something from it let's start with very
+00:01:18.990 simple but real example we have abstract
+00:01:22.530 class shape geometric shape which has a
+00:01:26.040 public property color and abstract
+00:01:28.799 function yet area which returns the area
+00:01:32.250 of the shape and it returns fault
+00:01:34.890 so in after of class I can have normal
+00:01:37.439 methods also for example I can create
+00:01:39.869 getter from the color but actually I
+00:01:44.009 can't create objects from the shape
+00:01:45.810 unless I extend the shape class and
+00:01:49.350 create some real geometric class for
+00:01:52.770 example plus triangle extends shape and
+00:02:01.770 here my PHP store again gives me hints
+00:02:05.159 that triangle class must implement
+00:02:08.090 method
+00:02:09.160 get area I can of course write this
+00:02:12.430 method myself or I can keep on enter and
+00:02:15.160 aid this method automatically by the hph
+00:02:18.670 tour and this triangle now is a valid
+00:02:21.550 class tonight
+00:02:22.510 I can create an instance from this let's
+00:02:25.210 add one more method in the abstract
+00:02:27.340 class constructor for the color this
+00:02:34.120 color equals color and now when I create
+00:02:38.620 triangle I need to give this color
+00:02:40.390 let's give red for calculating area it
+00:02:44.140 depends on the geometric shape itself so
+00:02:47.380 for triangle calculating of the area can
+00:02:51.250 be can be absolutely different from
+00:02:53.200 another shape let's create another shape
+00:02:55.810 for example circle I have typo working
+00:03:08.020 as you can see I have to implement this
+00:03:11.920 gate area method for the circle also and
+00:03:14.530 let's create one more class rectangle
+00:03:20.220 and I have to implement gate area also
+00:03:23.050 so we have one abstract method gate area
+00:03:26.560 and I need to implement this method in
+00:03:28.690 all subclasses so the parent class shape
+00:03:32.380 knows that if it's a geometric shape it
+00:03:35.260 has some kind of area and this area can
+00:03:38.410 be calculated in some way but it doesn't
+00:03:41.770 know how it should be calculated because
+00:03:44.230 it depends on the shape itself so now we
+00:03:46.780 have three different shape circle
+00:03:49.060 triangle and rectangle and all of them
+00:03:51.610 will have different gate area method for
+00:03:55.180 circle we can add additional properties
+00:03:57.370 like radius we can override parents
+00:04:03.370 constructor and we can also accept
+00:04:06.340 radius and save in the public property
+00:04:10.300 radius so and now for calculating the
+00:04:13.660 area for the circle the only thing what
+00:04:16.060 we need is the radius and now we can
+00:04:18.220 implement actually implement to get area
+00:04:20.649 method for the
+00:04:21.649 circle which will be these radios
+00:04:26.350 multiplied on these radios multiplied on
+00:04:32.259 3.14 which is PI for rectangle we can
+00:04:36.139 have width and length and for
+00:04:38.810 calculating the area of the rectangle we
+00:04:40.970 need this written length I can add these
+00:04:43.250 public properties and the game override
+00:04:45.830 parent constructor accepting here with
+00:04:48.889 in length also and now we can also
+00:04:52.520 implement gate area method of the
+00:04:54.199 rectangle
+00:04:55.039 I'm not basically going to do the same
+00:04:56.900 thing for triangle but we will need to
+00:04:58.760 add additional properties for triangle
+00:05:00.470 also like the head of the triangle in
+00:05:02.419 the length of the we edge and so on but
+00:05:05.210 let's keep for the triangle and create
+00:05:07.729 an instance of a rectangle I'm going to
+00:05:10.940 change this to rectangle give the color
+00:05:15.639 with let's say it's 10 in the length is
+00:05:19.280 5 this is a triangle and let's print the
+00:05:22.940 area of this triangle get area let's run
+00:05:30.110 the code and here we see that the area
+00:05:36.169 of this triangle is 50 let's create
+00:05:39.199 another instance for circle give the
+00:05:44.240 color and the radius let's say it's 5 in
+00:05:50.060 print the area for the circle it's
+00:05:59.990 seventy eight point five for code
+00:06:04.310 organization is good practice that you
+00:06:06.260 declare your abstract methods at the top
+00:06:09.680 and then your real methods this is the
+00:06:13.430 end of the video thanks for watching I'm
+00:06:15.470 looking forward your favorite write in
+00:06:17.449 the comments what do you think about my
+00:06:18.860 videos and if the video is OK for you if
+00:06:22.010 it gave you some knowledge wait please
+00:06:24.320 here doing subscribe buttons and see you
+00:06:26.960 next time
